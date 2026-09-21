@@ -1,7 +1,6 @@
 \documentclass{article}
 
 \usepackage{fancyhdr}
-\usepackage{fontspec}
 \usepackage{amsmath}
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage[spanish]{babel}
@@ -9,8 +8,38 @@
 \usepackage{listings}
 \usepackage{xcolor}
 
-% Set the font
-\setmainfont{Liberation Serif}
+\definecolor{codebg}{HTML}{F5F5F5}
+\definecolor{codeframe}{HTML}{CCCCCC}
+\definecolor{codecomment}{HTML}{6A737D}
+\definecolor{codekeyword}{HTML}{D73A49}
+\definecolor{codestring}{HTML}{032F62}
+\definecolor{linenumber}{HTML}{AAAAAA}
+
+\lstdefinestyle{shell}{
+  language=bash,
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  framesep=8pt,
+  rulecolor=\color{codeframe},
+  commentstyle=\color{codecomment}\itshape,
+  keywordstyle=\color{codekeyword}\bfseries,
+  stringstyle=\color{codestring},
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  numbers=left,
+  numberstyle=\tiny\color{linenumber},
+  numbersep=12pt,
+  xleftmargin=24pt,
+  xrightmargin=8pt,
+  tabsize=2,
+  captionpos=b,
+  aboveskip=10pt,
+  belowskip=10pt,
+}
+
+\lstset{style=shell}
 
 % Set the page numbering to the right
 \fancyhf{} 
